@@ -11,6 +11,7 @@ requires 'Catalyst::Plugin::ConfigLoader';
 requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::View::TT';
+requires 'Catalyst::Controller::REST';
 requires 'Moose';
 requires 'Hailo';
 requires 'namespace::autoclean';
