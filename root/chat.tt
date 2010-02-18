@@ -19,7 +19,16 @@
         <p>[% c.config.feed || "Feed Hailo" %]:</p>
         <textarea id="reply" maxlength="500"></textarea>
       </form>
-      
     </div>
+
+    <div id="footer">
+      <p>
+        Powered
+        by <a href="http://github.com/avar/hailo-ui-web">Hailo::UI::Web</a>
+        using the <a href="http://github.com/hinrik/hailo">Hailo</a>
+        Markov bot.
+      </p>
+    </div>
+
   </body>
 </html>
