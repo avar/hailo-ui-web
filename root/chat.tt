@@ -8,9 +8,6 @@
     <script type="text/javascript">
         var name = "Anonymous";
 
-        // display name on page
-        $("#name-area").html("You are: <span>" + name + "</span>");
-        
         // kick off chat
         var chat =  new Chat();
         $(function() {
@@ -54,12 +51,11 @@
     <div id="page-wrap">
       <h2>Hailo Chat</h2>
       
-      <p id="name-area"></p>
       <div id="chat-wrap"><div id="chat-area"></div></div>
       
       <form id="send-message-area">
         <p>Your message: </p>
-        <textarea id="sendie" maxlength = '100' ></textarea>
+        <textarea id="sendie" maxlength = '500' ></textarea>
       </form>
       
     </div>
