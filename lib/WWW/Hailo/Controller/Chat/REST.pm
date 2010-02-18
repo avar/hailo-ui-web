@@ -24,11 +24,17 @@ sub reply      : Local : ActionClass('REST') { }
 sub reply_GET {
     my ( $self, $c ) = @_;
 
+    my $nick = $c->request->param("nick");
+    my $text = $c->request->param("text");
+
+    my $hailo = $c->model("Hailo");
+    my $reply = $hailo->learn_reply($text) // "I don't know enough to answer you yet";
+
     $self->status_ok(
         $c,
         entity => {
-            nick => "Hailo",
-            text => "Foobar",
+            nick => ref($hailo),
+            text => $reply,
         },
     );
 }

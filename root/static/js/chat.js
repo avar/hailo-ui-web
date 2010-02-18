@@ -11,8 +11,8 @@ function sendChat(message, nickname)
         type: "GET",
         url: "/chat/rest/reply",
         data: {  
-            'nickname': nickname,
-            'message': message,
+            'nick': nickname,
+            'text': message,
         },
         dataType: "json",
         success: function(data){
