@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hailo Chat</title>
+    <title>[% c.config.title || "Hailo Chat" %]</title>
     <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/hailo.js"></script>
@@ -9,14 +9,14 @@
   </head>
   <body>
     <div id="page-wrap">
-      <h2>Hailo Chat</h2>
+      <h2>[% c.config.heading || "Hailo Chat" %]</h2>
       
       <div id="chat-wrap">
         <div id="chat-area"></div>
       </div>
       
       <form id="send-message-area">
-        <p>Feed Hailo: </p>
+        <p>[% c.config.feed || "Feed Hailo" %]:</p>
         <textarea id="reply" maxlength="500"></textarea>
       </form>
       
