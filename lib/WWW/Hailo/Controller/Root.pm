@@ -14,10 +14,6 @@ __PACKAGE__->config(namespace => '');
 
 WWW::Hailo::Controller::Root - Root Controller for WWW::Hailo
 
-=head1 DESCRIPTION
-
-[enter your description here]
-
 =head1 METHODS
 
 =head2 index
@@ -29,8 +25,7 @@ The root page (/)
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    # Hello World
-    $c->response->body( $c->welcome_message );
+    $c->detach( 'WWW::Hailo::Controller::Chat' => 'index' );
 }
 
 =head2 default
@@ -55,11 +50,13 @@ sub end : ActionClass('RenderView') {}
 
 =head1 AUTHOR
 
-Catalyst developer
+E<AElig>var ArnfjE<ouml>rE<eth> Bjarmason <avar@cpan.org>
 
 =head1 LICENSE
 
-This library is free software. You can redistribute it and/or modify
+Copyright 2010 <<AElig>var ArnfjE<ouml>rE<eth> Bjarmason <avar@cpan.org>
+
+This program is free software, you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =cut
