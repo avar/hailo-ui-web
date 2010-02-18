@@ -1,8 +1,10 @@
 package WWW::Hailo::Controller::Chat::REST;
+use 5.10.0;
 use Moose;
+use Data::Dump 'dump';
 use namespace::autoclean;
 
-BEGIN {extends 'Catalyst::Controller'; }
+BEGIN {extends 'Catalyst::Controller::REST'; }
 
 =head1 NAME
 
@@ -17,12 +19,19 @@ WWW::Hailo::Controller::Chat::REST - Catalyst Controller
 
 =cut
 
-sub index :Path :Args(0) {
+sub reply      : Local : ActionClass('REST') { }
+
+sub reply_GET {
     my ( $self, $c ) = @_;
 
-    $c->response->body('Matched WWW::Hailo::Controller::Chat::REST in Chat::REST.');
+    $self->status_ok(
+        $c,
+        entity => {
+            nick => "Hailo",
+            text => "Foobar",
+        },
+    );
 }
-
 
 =head1 AUTHOR
 
