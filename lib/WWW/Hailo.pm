@@ -43,7 +43,8 @@ WWW::Hailo - Simple Web interface to L<Hailo>
 
 =head1 DESCRIPTION
 
-[enter your description here]
+This is a simple jQuery powered web UI to the L<Hailo> conversation
+bot.
 
 =head1 SEE ALSO
 
