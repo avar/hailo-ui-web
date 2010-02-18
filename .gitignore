@@ -1,2 +1,16 @@
+_Inline
+Makefile
+Makefile.old
+WWW-Hailo-*
+blib
+inc
+pm_to_blib
+META.yml
+cover_db
 *.db
+*.brn
+*.trn
+*.txt
+*.bak
+*.#*
 *.log
