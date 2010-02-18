@@ -24,6 +24,6 @@ function sendChat(message, nickname)
 }
 
 function add_to_chat(nick, text) {
-    $('#chat-area').append($("<p>" + "<span>" + nick + "</span>" + text +"</p>"));
+    $('#chat-area').append($("<p>" + "<span>" + nick + "</span>" + " " + text +"</p>"));
     document.getElementById('chat-area').scrollTop = document.getElementById('chat-area').scrollHeight;
 }
