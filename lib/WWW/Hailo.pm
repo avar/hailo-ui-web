@@ -31,7 +31,7 @@ __PACKAGE__->config(
 );
 
 # Set up logging
-__PACKAGE__->log(Catalyst::Log::Log4perl->new('www_hailo_log4perl.conf'));
+__PACKAGE__->log(Catalyst::Log::Log4perl->new(__PACKAGE__->config->{'log4perl_config'}));
 
 # Start the application
 __PACKAGE__->setup();
