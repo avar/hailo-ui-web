@@ -30,12 +30,11 @@ __PACKAGE__->config(
     disable_component_resolution_regex_fallback => 1,
 );
 
-# Set up logging
-__PACKAGE__->log(Catalyst::Log::Log4perl->new(__PACKAGE__->config->{'log4perl_config'}));
-
 # Start the application
 __PACKAGE__->setup();
 
+# Set up logging
+__PACKAGE__->log(Catalyst::Log::Log4perl->new(__PACKAGE__->config->{'log4perl_config'}));
 
 =head1 NAME
 
