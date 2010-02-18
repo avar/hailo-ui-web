@@ -3,6 +3,7 @@ use Moose;
 use namespace::autoclean;
 
 use Catalyst::Runtime 5.80;
+use Catalyst::Log::Log4perl;
 
 use Catalyst qw/
     Unicode
@@ -28,6 +29,9 @@ __PACKAGE__->config(
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
 );
+
+# Set up logging
+__PACKAGE__->log(Catalyst::Log::Log4perl->new('www_hailo_log4perl.conf'));
 
 # Start the application
 __PACKAGE__->setup();

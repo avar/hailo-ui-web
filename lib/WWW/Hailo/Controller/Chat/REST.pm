@@ -24,11 +24,14 @@ sub reply      : Local : ActionClass('REST') { }
 sub reply_GET {
     my ( $self, $c ) = @_;
 
-    my $nick = $c->request->param("nick");
-    my $text = $c->request->param("text");
+    chomp(my $nick = $c->request->param("nick"));
+    chomp(my $text = $c->request->param("text"));
 
     my $hailo = $c->model("Hailo");
     my $reply = $hailo->learn_reply($text) // "I don't know enough to answer you yet";
+
+    my $ip = $c->request->address;
+    $c->log->debug("$ip/$nick: $text = $reply");
 
     $self->status_ok(
         $c,
