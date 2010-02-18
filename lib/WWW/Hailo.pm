@@ -4,16 +4,8 @@ use namespace::autoclean;
 
 use Catalyst::Runtime 5.80;
 
-# Set flags and add plugins for the application
-#
-#         -Debug: activates the debug mode for very useful log messages
-#   ConfigLoader: will load the configuration from a Config::General file in the
-#                 application's home directory
-# Static::Simple: will serve static files from the application's root
-#                 directory
-
 use Catalyst qw/
-    -Debug
+    Unicode
     ConfigLoader
     Static::Simple
 /;
@@ -21,7 +13,6 @@ use Catalyst qw/
 extends 'Catalyst';
 
 our $VERSION = '0.01';
-$VERSION = eval $VERSION;
 
 # Configure the application.
 #
@@ -44,7 +35,7 @@ __PACKAGE__->setup();
 
 =head1 NAME
 
-WWW::Hailo - Catalyst based application
+WWW::Hailo - Simple Web interface to L<Hailo>
 
 =head1 SYNOPSIS
 
@@ -60,11 +51,13 @@ L<WWW::Hailo::Controller::Root>, L<Catalyst>
 
 =head1 AUTHOR
 
-Catalyst developer
+E<AElig>var ArnfjE<ouml>rE<eth> Bjarmason <avar@cpan.org>
 
 =head1 LICENSE
 
-This library is free software. You can redistribute it and/or modify
+Copyright 2010 <<AElig>var ArnfjE<ouml>rE<eth> Bjarmason <avar@cpan.org>
+
+This program is free software, you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
 =cut
