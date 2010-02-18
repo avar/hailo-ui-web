@@ -9,7 +9,7 @@ function sendChat(message, nickname)
 
     $.ajax({
         type: "GET",
-        url: "/chat/rest/reply",
+        url: "/api/learn_reply",
         data: {  
             'nick': nickname,
             'text': message,
