@@ -1,13 +1,13 @@
 #!/usr/bin/env perl
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('WWW::Hailo', 'CGI');
+Catalyst::ScriptRunner->run('Hailo::UI::Web', 'CGI');
 
 1;
 
 =head1 NAME
 
-www_hailo_cgi.pl - Catalyst CGI
+hailo_ui_web_cgi.pl - Catalyst CGI
 
 =head1 SYNOPSIS
 

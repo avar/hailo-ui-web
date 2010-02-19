@@ -5,17 +5,17 @@ BEGIN {
 }
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('WWW::Hailo', 'Server');
+Catalyst::ScriptRunner->run('Hailo::UI::Web', 'Server');
 
 1;
 
 =head1 NAME
 
-www_hailo_server.pl - Catalyst Test Server
+hailo_ui_web_server.pl - Catalyst Test Server
 
 =head1 SYNOPSIS
 
-www_hailo_server.pl [options]
+hailo_ui_web_server.pl [options]
 
    -d --debug           force debug mode
    -f --fork            handle each request in a new process

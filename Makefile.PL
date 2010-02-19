@@ -3,8 +3,8 @@
 # expected.  You have been warned.
 use inc::Module::Install;
 
-name 'WWW-Hailo';
-all_from 'lib/WWW/Hailo.pm';
+name 'Hailo-UI-Web';
+all_from 'lib/Hailo/UI/Web.pm';
 
 requires 'Catalyst::Runtime' => '5.8002';
 requires 'Catalyst::Plugin::ConfigLoader';

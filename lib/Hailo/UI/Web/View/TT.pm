@@ -1,12 +1,21 @@
-package WWW::Hailo::Model::Hailo;
+package Hailo::UI::Web::View::TT;
 use Moose;
-use namespace::autoclean;
 
-extends 'Catalyst::Model::Adaptor';
+extends 'Catalyst::View::TT';
+
+__PACKAGE__->config(TEMPLATE_EXTENSION => '.tt');
 
 =head1 NAME
 
-WWW::Hailo::Model::Hailo - Catalyst Model Adaptor for L<Hailo>
+Hailo::UI::Web::View::TT - TT View for Hailo::UI::Web
+
+=head1 DESCRIPTION
+
+TT View for Hailo::UI::Web.
+
+=head1 SEE ALSO
+
+L<Hailo::UI::Web>
 
 =head1 AUTHOR
 
@@ -21,6 +30,4 @@ it under the same terms as Perl itself.
 
 =cut
 
-__PACKAGE__->config( class => 'Hailo' );
-__PACKAGE__->meta->make_immutable;
-
+1;

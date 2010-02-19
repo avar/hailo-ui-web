@@ -1,17 +1,17 @@
 #!/usr/bin/env perl
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('WWW::Hailo', 'FastCGI');
+Catalyst::ScriptRunner->run('Hailo::UI::Web', 'FastCGI');
 
 1;
 
 =head1 NAME
 
-www_hailo_fastcgi.pl - Catalyst FastCGI
+hailo_ui_web_fastcgi.pl - Catalyst FastCGI
 
 =head1 SYNOPSIS
 
-www_hailo_fastcgi.pl [options]
+hailo_ui_web_fastcgi.pl [options]
 
  Options:
    -? -help      display this help and exits

@@ -1,4 +1,4 @@
-package WWW::Hailo;
+package Hailo::UI::Web;
 use Moose;
 use namespace::autoclean;
 
@@ -25,7 +25,7 @@ our $VERSION = '0.02';
 # local deployment.
 
 __PACKAGE__->config(
-    name => 'WWW::Hailo',
+    name => 'Hailo::UI::Web',
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
 );
@@ -38,7 +38,7 @@ __PACKAGE__->log(Catalyst::Log::Log4perl->new(__PACKAGE__->config->{'log4perl_co
 
 =head1 NAME
 
-WWW::Hailo - Simple Web interface to L<Hailo>
+Hailo::UI::Web - Simple Web interface to L<Hailo>
 
 =head1 SYNOPSIS
 
@@ -51,7 +51,7 @@ bot.
 
 =head1 SEE ALSO
 
-L<WWW::Hailo::Controller::Root>, L<Catalyst>
+L<Hailo::UI::Web::Controller::Root>, L<Catalyst>
 
 =head1 AUTHOR
 

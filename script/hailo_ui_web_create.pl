@@ -4,17 +4,17 @@ use strict;
 use warnings;
 
 use Catalyst::ScriptRunner;
-Catalyst::ScriptRunner->run('WWW::Hailo', 'Create');
+Catalyst::ScriptRunner->run('Hailo::UI::Web', 'Create');
 
 1;
 
 =head1 NAME
 
-www_hailo_create.pl - Create a new Catalyst Component
+hailo_ui_web_create.pl - Create a new Catalyst Component
 
 =head1 SYNOPSIS
 
-www_hailo_create.pl [options] model|view|controller name [helper] [options]
+hailo_ui_web_create.pl [options] model|view|controller name [helper] [options]
 
  Options:
    --force        don't create a .new file where a file to be created exists
@@ -22,15 +22,15 @@ www_hailo_create.pl [options] model|view|controller name [helper] [options]
    --help         display this help and exits
 
  Examples:
-   www_hailo_create.pl controller My::Controller
-   www_hailo_create.pl -mechanize controller My::Controller
-   www_hailo_create.pl view My::View
-   www_hailo_create.pl view MyView TT
-   www_hailo_create.pl view TT TT
-   www_hailo_create.pl model My::Model
-   www_hailo_create.pl model SomeDB DBIC::Schema MyApp::Schema create=dynamic\
+   hailo_ui_web_create.pl controller My::Controller
+   hailo_ui_web_create.pl -mechanize controller My::Controller
+   hailo_ui_web_create.pl view My::View
+   hailo_ui_web_create.pl view MyView TT
+   hailo_ui_web_create.pl view TT TT
+   hailo_ui_web_create.pl model My::Model
+   hailo_ui_web_create.pl model SomeDB DBIC::Schema MyApp::Schema create=dynamic\
    dbi:SQLite:/tmp/my.db
-   www_hailo_create.pl model AnotherDB DBIC::Schema MyApp::Schema create=static\
+   hailo_ui_web_create.pl model AnotherDB DBIC::Schema MyApp::Schema create=static\
    dbi:Pg:dbname=foo root 4321
 
  See also:

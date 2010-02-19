@@ -1,4 +1,4 @@
-package WWW::Hailo::Controller::Root;
+package Hailo::UI::Web::Controller::Root;
 use Moose;
 use namespace::autoclean;
 
@@ -12,7 +12,7 @@ __PACKAGE__->config(namespace => '');
 
 =head1 NAME
 
-WWW::Hailo::Controller::Root - Root Controller for WWW::Hailo
+Hailo::UI::Web::Controller::Root - Root Controller for Hailo::UI::Web
 
 =head1 METHODS
 
@@ -25,7 +25,7 @@ The root page (/)
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
 
-    $c->detach( 'WWW::Hailo::Controller::Chat' => 'index' );
+    $c->detach( 'Hailo::UI::Web::Controller::Chat' => 'index' );
 }
 
 =head2 default

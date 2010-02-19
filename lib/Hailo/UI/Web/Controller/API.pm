@@ -1,4 +1,4 @@
-package WWW::Hailo::Controller::API;
+package Hailo::UI::Web::Controller::API;
 use 5.10.0;
 use Moose;
 use namespace::autoclean;
@@ -7,7 +7,7 @@ BEGIN {extends 'Catalyst::Controller::REST'; }
 
 =head1 NAME
 
-WWW::Hailo::Controller::API - Catalyst Controller
+Hailo::UI::Web::Controller::API - Catalyst Controller
 
 =head1 METHODS
 
@@ -18,18 +18,19 @@ WWW::Hailo::Controller::API - Catalyst Controller
 =cut
 
 sub learn_reply : Local : ActionClass('REST') { }
+sub reply : Local : ActionClass('REST') { }
+
 sub learn_reply_GET {
     my ( $self, $c ) = @_;
     $self->x_reply($c, "learn_reply");
 }
 
-sub reply : Local : ActionClass('REST') { }
 sub reply_GET {
     my ( $self, $c ) = @_;
     $self->x_reply($c, "reply");
 }
 
-sub x_reply {
+sub x_reply :Private {
     my ( $self, $c, $method ) = @_;
 
     if ($c->request->param("text")) {

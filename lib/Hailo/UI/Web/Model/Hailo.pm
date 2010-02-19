@@ -1,27 +1,12 @@
-package WWW::Hailo::Controller::Chat;
+package Hailo::UI::Web::Model::Hailo;
 use Moose;
 use namespace::autoclean;
 
-BEGIN {extends 'Catalyst::Controller'; }
+extends 'Catalyst::Model::Adaptor';
 
 =head1 NAME
 
-WWW::Hailo::Controller::Chat - Chat with Hailo
-
-=head1 METHODS
-
-=cut
-
-
-=head2 index
-
-=cut
-
-sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
-
-    $c->stash->{template} = 'chat.tt';
-}
+Hailo::UI::Web::Model::Hailo - Catalyst Model Adaptor for L<Hailo>
 
 =head1 AUTHOR
 
@@ -36,5 +21,6 @@ it under the same terms as Perl itself.
 
 =cut
 
+__PACKAGE__->config( class => 'Hailo' );
 __PACKAGE__->meta->make_immutable;
 
