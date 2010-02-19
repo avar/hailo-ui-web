@@ -17,6 +17,7 @@ requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::View::TT';
 requires 'Catalyst::Controller::REST';
 requires 'Catalyst::Log::Log4perl';
+requires 'Catalyst::Model::Adaptor';
 requires 'Moose';
 requires 'Hailo';
 requires 'namespace::autoclean';
