@@ -8,6 +8,7 @@ inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Catalyst.pm
 inc/Module/Install/Fetch.pm
+inc/Module/Install/GithubMeta.pm
 inc/Module/Install/Include.pm
 inc/Module/Install/Makefile.pm
 inc/Module/Install/Metadata.pm
@@ -27,6 +28,7 @@ META.yml
 root/chat.tt
 root/favicon.ico
 root/static/css/style.css
+root/static/img/bg.png
 root/static/js/chat.js
 root/static/js/hailo.js
 script/hailo_ui_web_cgi.pl
