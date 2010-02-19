@@ -1,10 +1,14 @@
-#!/usr/bin/env perl
-# IMPORTANT: if you delete this file your app will not work as
-# expected.  You have been warned.
 use inc::Module::Install;
 
-name 'Hailo-UI-Web';
-all_from 'lib/Hailo/UI/Web.pm';
+name           ('Hailo-UI-Web');
+perl_version   ('5.010');
+author         ('Ævar Arnfjörð Bjarmason <avar@cpan.org>');
+all_from       ('lib/Hailo/UI/Web.pm');
+license        ('perl');
+homepage       ('http://search.cpan.org/dist/Hailo-UI-Web');
+githubmeta     ();
+bugtracker     ('http://github.com/avar/hailo-ui-web/issues');
+resources      (Ratings => 'http://cpanratings.perl.org/d/Hailo-UI-Web');
 
 requires 'Catalyst::Runtime' => '5.8002';
 requires 'Catalyst::Plugin::ConfigLoader';
