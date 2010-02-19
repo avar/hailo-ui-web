@@ -18,7 +18,7 @@ Hailo::UI::Web::Controller::API - Catalyst Controller
 =cut
 
 sub learn_reply : Local : ActionClass('REST') { }
-sub reply : Local : ActionClass('REST') { }
+sub reply       : Local : ActionClass('REST') { }
 
 sub learn_reply_GET {
     my ( $self, $c ) = @_;

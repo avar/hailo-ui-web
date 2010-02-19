@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::More;
 
-BEGIN { use_ok 'Catalyst::Test', 'WWW::Hailo' }
+BEGIN { use_ok 'Catalyst::Test', 'Hailo::UI::Web' }
 BEGIN { use_ok 'Hailo::UI::Web::Controller::API' }
 
 ok( !request('/api/learn_reply')->is_success, 'Request needs text=' );
