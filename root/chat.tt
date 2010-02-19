@@ -24,8 +24,8 @@
     <div id="footer">
       <p>
         Powered
-        by <a href="http://github.com/avar/hailo-ui-web">Hailo::UI::Web</a>
-        using the <a href="http://github.com/hinrik/hailo">Hailo</a>
+        by <a href="http://github.com/avar/hailo-ui-web" title="Hailo::UI::Web version [% ui_version %]">Hailo::UI::Web</a> 
+        using the <a href="http://github.com/hinrik/hailo" title="Hailo version [% hailo_version %]">Hailo</a>
         Markov bot.
       </p>
     </div>

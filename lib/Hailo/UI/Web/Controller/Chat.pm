@@ -1,5 +1,7 @@
 package Hailo::UI::Web::Controller::Chat;
 use Moose;
+use Hailo;
+use Hailo::UI::Web;
 use namespace::autoclean;
 
 BEGIN {extends 'Catalyst::Controller'; }
@@ -19,6 +21,9 @@ Hailo::UI::Web::Controller::Chat - Chat with Hailo
 
 sub index :Path :Args(0) {
     my ( $self, $c ) = @_;
+
+    $c->stash->{ui_version}    = $Hailo::UI::Web::VERSION;
+    $c->stash->{hailo_version} = $Hailo::VERSION;
 
     $c->stash->{template} = 'chat.tt';
 }
